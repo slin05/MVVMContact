@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module10Assignment", "Module10Assignment\Module10Assignment.csproj", "{A78D9F5C-A278-44AD-AC9E-C542DD893F04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A78D9F5C-A278-44AD-AC9E-C542DD893F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78D9F5C-A278-44AD-AC9E-C542DD893F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78D9F5C-A278-44AD-AC9E-C542DD893F04}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A78D9F5C-A278-44AD-AC9E-C542DD893F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78D9F5C-A278-44AD-AC9E-C542DD893F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78D9F5C-A278-44AD-AC9E-C542DD893F04}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A391F1B-AA8C-49D8-AF68-E10FDB2B04E1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module10Assignment.Views.ContactsPage"
+             xmlns:viewmodel="clr-namespace:Module10Assignment.ViewModels"
+             xmlns:model="clr-namespace:Module10Assignment.Models"
+             x:DataType="viewmodel:ContactsViewModel"
+             Title="{Binding Title}">
+
+    <Grid RowDefinitions="*, Auto">
+        <CollectionView
+            ItemsSource="{Binding Contacts}"
+            SelectionMode="Single"
+            SelectedItem="{Binding SelectedContact}"
+            SelectionChanged="OnContactSelected">
+
+            <CollectionView.EmptyView>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="No contacts yet. Add your first contact!" 
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:ContactModel">
+                    <Frame Margin="5" Padding="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ContactsViewModel}}, Path=ContactSelectedCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding Email}" FontSize="14" TextColor="Gray" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button 
+            Grid.Row="1"
+            Text="Add New Contact" 
+            Command="{Binding GoToAddContactCommand}"
+            Margin="20" />
+    </Grid>
+
+</ContentPage>

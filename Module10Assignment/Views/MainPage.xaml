@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module10Assignment.Views.MainPage"
+             xmlns:viewmodel="clr-namespace:Module10Assignment.ViewModels"
+             x:DataType="viewmodel:AddContactViewModel"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Add New Contact"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Entry
+                Placeholder="Name"
+                Text="{Binding Name}" />
+
+            <Entry
+                Placeholder="Email"
+                Text="{Binding Email}"
+                Keyboard="Email" />
+
+            <Entry
+                Placeholder="Phone Number"
+                Text="{Binding PhoneNumber}"
+                Keyboard="Telephone" />
+
+            <Editor
+                Placeholder="Description"
+                Text="{Binding Description}"
+                HeightRequest="100"
+                AutoSize="TextChanges" />
+
+            <Button
+                Text="Save Contact"
+                Command="{Binding SaveContactCommand}"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
